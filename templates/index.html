@@ -1,9 +1,9 @@
 <html>
     <head>
         <title>
-            UTXO Balance | Boardwalk Interns
+            UTXO Balance | Boardwalk
         </title>
-        <link rel="stylesheet" href={{ url_for('static', filename='index.css') }}/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"/>
     </head>
     <body>
         <form action="{{ url_for('getBalance') }}" autocomplete="off" method="post">
@@ -17,7 +17,7 @@
         </fieldset>
         {% if not valid_email%}
             <fieldset>
-                Please check your Email ID and try again!
+                Please check your Email ID and make sure you are connected to the internet!
             </fieldset>       
         {% elif total_balance and useremail %}
             <fieldset>
