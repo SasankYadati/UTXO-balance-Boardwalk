@@ -27,7 +27,6 @@ class UTXO:
         self.headers = { "Authorization" : self.__getAuthorizationString__()}
         self.response = requests.get(self.url, headers=self.headers)
         self.data = self.response.json()
-        # print(self.data)
     
     def displayBalance(self):
         self.__getBalance__()
