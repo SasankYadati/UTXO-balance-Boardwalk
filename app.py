@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def getBalance():
     if request.method == 'GET':
-        return render_template('index.html')
+        return render_template('index.html', valid_email=True)
     elif request.method == 'POST':
         valid_email = True
         total_balance = -1
